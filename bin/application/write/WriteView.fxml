@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.write.WriteViewController">
+   <children>
+      <BorderPane prefHeight="480.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Write Diary" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Monaco" size="34.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin></Label>
+         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="138.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="711.0" minWidth="10.0" prefWidth="649.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="226.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Feeling" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Monaco" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="feelingField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="titleField" prefWidth="100.0" GridPane.columnIndex="1" />
+                  <Label text="title">
+                     <font>
+                        <Font name="Monaco" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Weather" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Monaco" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Date" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Monaco" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Content" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Monaco" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="180.0" left="70.0" />
+                     </GridPane.margin></Label>
+                  <ChoiceBox fx:id="weather" prefHeight="30.0" prefWidth="435.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="470.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="200.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="40.0" right="70.0" top="30.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="50.0" spacing="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleCancelAndReturnAction" prefWidth="120.0" text="取消并返回">
+                     <HBox.margin>
+                        <Insets left="640.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleSaveAction" prefWidth="120.0" text="保存日记" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

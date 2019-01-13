@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.LoginViewController">
+   <children>
+      <StackPane prefHeight="350.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="410.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="leftImageView" fitHeight="400.0" fitWidth="235.0" layoutX="24.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="0.0" GridPane.columnIndex="1">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <BorderPane layoutY="-14.0" prefHeight="233.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0">
+                                 <center>
+                                    <VBox prefHeight="0.0" prefWidth="242.0" spacing="30.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <HBox layoutX="300.0" layoutY="146.0" spacing="30.0">
+                                             <children>
+                                                <Label fx:id="userNameLabel" layoutX="300.0" layoutY="151.0" prefHeight="30.0" prefWidth="50.0" />
+                                                <TextField fx:id="userNameField" layoutX="374.0" layoutY="146.0" prefHeight="35.0" promptText="请输入用户名">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="303.0" layoutY="207.0" spacing="30.0">
+                                             <children>
+                                                <Label fx:id="passwordLabel" layoutX="303.0" layoutY="212.0" prefHeight="30.0" prefWidth="50.0" />
+                                                <PasswordField fx:id="passwordField" prefHeight="35.0" promptText="请输入密码" />
+                                                <Label onMouseClicked="#handleForgetPasswordAction" prefHeight="30.0" prefWidth="80.0" text="forget ">
+                                                   <font>
+                                                      <Font name="Monaco" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="340.0" layoutY="291.0" spacing="160.0">
+                                             <children>
+                                                <Button fx:id="registButton" blendMode="DARKEN" layoutX="340.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleRegistButtonAction" prefWidth="80.0" text="注册">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="LoginButton" defaultButton="true" layoutX="483.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefWidth="80.0" style="-fx-border-radius: 25;" text="登录">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="25.0" right="25.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="20.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </center>
+                                 <top>
+                                    <Label contentDisplay="CENTER" minHeight="0.0" prefHeight="140.0" text="Diary System" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Monaco" size="26.0" />
+                                       </font>
+                                       <BorderPane.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </BorderPane.margin>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label fx:id="errorInfoLabel" prefWidth="200.0" textFill="#eb0707" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="15.0" left="20.0" right="20.0" />
+                                       </BorderPane.margin>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

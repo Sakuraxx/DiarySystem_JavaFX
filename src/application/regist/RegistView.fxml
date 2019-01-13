@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.regist.RegistViewController">
+   <center>
+      <GridPane prefHeight="0.0" prefWidth="565.0" vgap="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="30.0" text="用户名">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" text="密码" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label minHeight="0.0" prefHeight="30.0" prefWidth="80.0" text="密保答案" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" text="验证码" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" text="密保问题" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" text="验证码答案" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameField" prefHeight="30.0" prefWidth="270.0" promptText="以字母开头、至少6个字符" GridPane.columnIndex="1" />
+            <TextField fx:id="passwordField" prefHeight="30.0" prefWidth="270.0" promptText="包含数字、字母和特殊符号" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="secretAnswerField" prefHeight="30.0" prefWidth="270.0" promptText="请输入密码问题答案" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="verificationCodeAnswerField" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="270.0" promptText="请输入验证码答案" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="verificationCode" prefHeight="30.0" prefWidth="285.0" text="自动生成的验证码" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="secretQuestion" prefHeight="30.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="userNameErrorInfo" prefHeight="30.0" prefWidth="200.0" textFill="#e41a1a" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="registButton" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#HandleRegistButtonAction" prefHeight="30.0" prefWidth="292.0" text="注册" textFill="#232524" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="passwordErrorInfo" prefHeight="30.0" prefWidth="200.0" textFill="#eb1111" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="verificationAnswerErrorInfo" prefHeight="30.0" prefWidth="200.0" textFill="#f51c1c" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="secretAnswerErrorInfo" prefHeight="30.0" prefWidth="200.0" textFill="#eb1111" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="282.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="127.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="90.0" top="30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="backToLoginView" fitHeight="50.0" fitWidth="85.0" onMouseClicked="#HandleBackToLoginAction" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin></ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="10.0" prefHeight="50.0" prefWidth="400.0" text="Regits" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Monaco" size="34.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>

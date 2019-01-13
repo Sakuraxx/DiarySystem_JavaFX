@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.system.SystemViewController">
+   <children>
+      <VBox layoutY="163.0" spacing="40.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="390.0">
+         <children>
+            <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="205.0" prefHeight="50.0" prefWidth="200.0" text="(*╹▽╹*)" AnchorPane.leftAnchor="0.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#handleLogoutLabelClickedAction" prefHeight="50.0" prefWidth="200.0" text="退出登录" />
+         </children>
+      </VBox>
+      <Label layoutX="275.0" layoutY="44.0" text="Diary System">
+         <font>
+            <Font name="Monaco" size="36.0" />
+         </font></Label>
+      <HBox layoutX="243.0" layoutY="228.0" spacing="100.0">
+         <children>
+            <Button layoutX="289.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleWriteBtnAction" prefHeight="50.0" prefWidth="120.0" text="Write Diary" />
+            <Button layoutX="466.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleFindBtnAction" prefHeight="50.0" prefWidth="120.0" text="FindDiary" />
+         </children>
+      </HBox>
+      <Separator layoutX="212.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="0.0" />
+      <Label alignment="CENTER" layoutX="16.0" layoutY="65.0" prefHeight="50.0" prefWidth="200.0" text="欢迎我可爱的小主人回来~‘" AnchorPane.leftAnchor="16.0" />
+   </children>
+</AnchorPane>

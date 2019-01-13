@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.forget.ResetPasswdViewController">
+   <children>
+      <Label layoutX="144.0" layoutY="29.0" text="Reset Password">
+         <font>
+            <Font name="Monaco" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="135.0" prefHeight="30.0" text="新的密码">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="185.0" prefHeight="30.0" text="密码确认">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmButton" layoutX="188.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleConfirmButtonAction" prefHeight="30.0" prefWidth="200.0" text="确认" />
+      <TextField fx:id="resetPasswdField" layoutX="187.0" layoutY="135.0" />
+      <TextField fx:id="confirmPasswdField" layoutX="187.0" layoutY="185.0" />
+   </children>
+</AnchorPane>

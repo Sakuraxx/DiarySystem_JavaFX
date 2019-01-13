@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.forget.ForgetViewController">
+   <children>
+      <ImageView fx:id="backToLoginImg" fitHeight="70.0" fitWidth="70.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleBackToLoginImgAction" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="235.0" layoutY="33.0" prefWidth="150.0" text="Forget">
+         <font>
+            <Font name="Monaco" size="34.0" />
+         </font></Label>
+      <TextField fx:id="userNameField" layoutX="165.0" layoutY="175.0" prefWidth="270.0" promptText="请输入用户名" />
+      <Label layoutX="90.0" layoutY="175.0" prefHeight="30.0" text="用户名">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="goToSecretQuesImg" fitHeight="70.0" fitWidth="70.0" layoutX="265.0" layoutY="266.0" onMouseClicked="#handleGoToSecretQuesImgView" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="215.0" />
+   </children>
+</AnchorPane>
